@@ -1,8 +1,6 @@
 # wasm-face-detection
 Face Detection using dlib/OpenCV in WebAssembly
 
-[Try](https://seanchas116.github.io/wasm-face-detection/)
-
 ## Prerequisites
 
 * cmake
@@ -15,8 +13,10 @@ Face Detection using dlib/OpenCV in WebAssembly
 npm install
 npm run configure:cpp
 npm run build:cpp
-npm run serve
-```
+npm run start
+
+``` 
+
 
 ## How to build OpenCV 4.2.0 for Emscripten (with contrib)
 
