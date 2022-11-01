@@ -251,7 +251,7 @@ public:
     /** @brief Outputs a string showing the used parameters setup
     @return a string which contains formated parameters information
      */
-    CV_WRAP virtual const String printSetup()=0;
+    CV_WRAP virtual String printSetup()=0;
 
     /** @brief Write xml/yml formated parameters information
     @param fs the filename of the xml file that will be open and writen with formatted parameters
@@ -389,9 +389,9 @@ public:
     CV_WRAP virtual void getMagnoRAW(OutputArray retinaOutput_magno)=0;
 
     /** @overload */
-    CV_WRAP virtual const Mat getMagnoRAW() const=0;
+    CV_WRAP virtual Mat getMagnoRAW() const=0;
     /** @overload */
-    CV_WRAP virtual const Mat getParvoRAW() const=0;
+    CV_WRAP virtual Mat getParvoRAW() const=0;
 
     /** @brief Activate color saturation as the final step of the color demultiplexing process -\> this
     saturation is a sigmoide function applied to each channel of the demultiplexed image.
@@ -438,13 +438,13 @@ public:
     @param reductionFactor only usefull if param useRetinaLogSampling=true, specifies the reduction
     factor of the output frame (as the center (fovea) is high resolution and corners can be
     underscaled, then a reduction of the output is allowed without precision leak
-    @param samplingStrenght only usefull if param useRetinaLogSampling=true, specifies the strenght of
+    @param samplingStrength only usefull if param useRetinaLogSampling=true, specifies the strength of
     the log scale that is applied
      */
     CV_WRAP static Ptr<Retina> create(Size inputSize, const bool colorMode,
                                            int colorSamplingMethod=RETINA_COLOR_BAYER,
                                            const bool useRetinaLogSampling=false,
-                                           const float reductionFactor=1.0f, const float samplingStrenght=10.0f);
+                                           const float reductionFactor=1.0f, const float samplingStrength=10.0f);
 };
 
 //! @}

@@ -13,9 +13,6 @@
 /* Compile for 'real' NVIDIA GPU architectures */
 #define CUDA_ARCH_BIN ""
 
-/* Create PTX or BIN for 1.0 compute capability */
-/* #undef CUDA_ARCH_BIN_OR_PTX_10 */
-
 /* NVIDIA GPU features are used */
 #define CUDA_ARCH_FEATURES ""
 
@@ -30,9 +27,6 @@
 
 /* Clp support */
 /* #undef HAVE_CLP */
-
-/* Cocoa API */
-/* #undef HAVE_COCOA */
 
 /* NVIDIA CUDA Runtime API*/
 /* #undef HAVE_CUDA */
@@ -59,12 +53,6 @@
 /* Geospatial Data Abstraction Library */
 /* #undef HAVE_GDAL */
 
-/* GTK+ 2.0 Thread support */
-/* #undef HAVE_GTHREAD */
-
-/* GTK+ 2.x toolkit */
-/* #undef HAVE_GTK */
-
 /* Halide support */
 /* #undef HAVE_HALIDE */
 
@@ -81,6 +69,7 @@
 /* #undef HAVE_IPP_IW_LL */
 
 /* JPEG-2000 codec */
+#define HAVE_OPENJPEG
 /* #undef HAVE_JASPER */
 
 /* IJG JPEG codec */
@@ -94,6 +83,8 @@
 
 /* NVIDIA Video Decoding API*/
 /* #undef HAVE_NVCUVID */
+/* #undef HAVE_NVCUVID_HEADER */
+/* #undef HAVE_DYNLINK_NVCUVID_HEADER */
 
 /* NVIDIA Video Encoding API*/
 /* #undef HAVE_NVCUVENC */
@@ -115,17 +106,14 @@
 /* PNG codec */
 /* #undef HAVE_PNG */
 
+/* PNG codec */
+/* #undef HAVE_SPNG */
+
 /* Posix threads (pthreads) */
 #define HAVE_PTHREAD
 
 /* parallel_for with pthreads */
 /* #undef HAVE_PTHREADS_PF */
-
-/* Qt support */
-/* #undef HAVE_QT */
-
-/* Qt OpenGL support */
-/* #undef HAVE_QT_OPENGL */
 
 /* Intel Threading Building Blocks */
 /* #undef HAVE_TBB */
@@ -135,9 +123,6 @@
 
 /* TIFF codec */
 /* #undef HAVE_TIFF */
-
-/* Win32 UI */
-/* #undef HAVE_WIN32UI */
 
 /* Define if your processor stores words with the most significant byte
    first (like Motorola and SPARC, unlike Intel and VAX). */
@@ -162,6 +147,6 @@
 /* #undef OPENCV_TRACE */
 
 /* Library QR-code decoding */
-/* #undef HAVE_QUIRC */
+#define HAVE_QUIRC
 
 #endif // OPENCV_CVCONFIG_H_INCLUDED

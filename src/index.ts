@@ -21,8 +21,8 @@ const preRun = () => {
 
 const init = async () => {
   const video = document.createElement("video");
-  video.width = 200;
-  video.height = 150;
+  video.width = 640;
+  video.height = 480;
   const stream = await navigator.mediaDevices.getUserMedia({
     audio: false,
     video: {
